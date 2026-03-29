@@ -1,4 +1,4 @@
-import { Constants } from '../common/Constants';
+import { Constants } from '../../../common/utils/Constants';
 import hilog from '@ohos.hilog';
 
 @Entry
@@ -14,10 +14,10 @@ struct Index {
         .width(24)
         .height(24)
         .objectFit(ImageFit.Contain)
-      Text(title)
-        .margin({ top: 4 })
-        .fontSize(10)
-        .fontColor(this.currentIndex === index ? '#3388ff' : '#E6000000')
+      // Text(title)
+      //   .margin({ top: 4 })
+      //   .fontSize(10)
+      //   .fontColor(this.currentIndex === index ? '#3388ff' : '#E6000000')
     }
     .justifyContent(FlexAlign.Center)
     .height(52)
@@ -56,12 +56,13 @@ struct Index {
       this.tabContentBuilder($r('app.string.tab_message'),
         Constants.TAB_INDEX_TWO, $r('app.media.tab_message_active'), $r('app.media.tab_message'))
       this.tabContentBuilder($r('app.string.tab_me'),
-        Constants.TAB_INDEX_TWO, $r('app.media.tab_me_active'), $r('app.media.tab_me'))
+        Constants.TAB_INDEX_THREE, $r('app.media.tab_me_active'), $r('app.media.tab_me'))
     }
     .width('100%')
     .backgroundColor('#F3F4F5')
     .barHeight(52)
     .barMode(BarMode.Fixed)
+    .scrollable(false)
     .onAnimationStart((index: number, targetIndex: number) => {
       hilog.info(0x0000, 'index', index.toString());
       this.currentIndex = targetIndex;

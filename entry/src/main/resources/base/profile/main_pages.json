@@ -1,11 +1,12 @@
 {
   "src": [
-    "pages/Index",
-    "pages/HomePage",
-    "pages/MePage",
-    "pages/DiscoverPage",
-    "pages/HomeDetailPage",
-    "pages/DiscoverDetailPage",
-    "pages/MessagePage"
+    "app/modules/main_tab/pages/Index",
+    "app/modules/home/pages/HomePage",
+    "app/modules/me/pages/MePage",
+    "app/modules/discover/pages/DiscoverPage",
+    "app/modules/home/pages/HomeDetailPage",
+    "app/modules/discover/pages/DiscoverDetailPage",
+    "app/modules/message/pages/MessagePage",
+    "app/modules/demo_test/pages/demo_test"
   ]
 }
